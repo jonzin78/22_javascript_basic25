@@ -1,0 +1,42 @@
+question3.html
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列・条件分岐（if文）の振り返り</title>
+</head>
+
+<body>
+    <button id="btn">クリック</button>
+    <script>
+        const hobbies = ['映画鑑賞', '読書', '旅行'];
+    </script>
+</body>
+
+<script>
+    let count = 0;
+
+    const colors = [' 赤', ' 青', ' 黄'];
+
+    const blue = color[1];
+    if (blue === '青') {
+        console.log('正解です');
+    } else {
+        console.log('不正解です');
+    }
+
+    const Btn = document.querySelector('#btn');
+    Btn.addEventListener('click', function () { alert('押されました'); })
+
+    const num = hobbies.legth;
+    if (num === 3) {
+        console.log('趣味が3つあります');
+    } else {
+        console.og('趣味が3つではありません');
+    }
+
+</script>
+
+</html>
