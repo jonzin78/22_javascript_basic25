@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>復習</title>
+    <style>
+        /*.doctitleっていうのがcssセレクター*/
+        /* スペースの意味＝子孫セレクター */
+        .doctitle span {
+            color: #ff0000;
+        }
+
+        li {
+            color: blue;
+        }
+
+        /*greenclass*/
+        .green {
+            color: green;
+        }
+
+        .orange {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="doctitle"><span>1</span>タイトルですよ。</h1>
+    <h2>サブタイトル</h2>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="orange">5</li>
+        <li>6</li>
+    </ul>
+    <button>色を変える</button>
+    <script>
+        //要素の取得（document．querySelector（cssセレクター））
+        //classは. , idは# , [type]属性セレクター
+        //docment e sobre o HTML e o () e o css
+        document.querySelector('.doctitle span');
+        //変数への代入（const 変数名 = 代入するもの);
+        //なんでもかんでも変数に入れとけ！
+        //esse daqui e = o title virou esse document de cima
+        const title = document.querySelector('.doctitle span');
+        // o num bvirou 0
+        const num = 0;
+        console.log(title);// <span>1</span>
+        console.log(0);// 0
+        // 変数constとletの使いわけ
+        const text = "コンスト";
+        // text = 'レット'; // って入れられない。再宣言✗　再代入✗
+        let text2 = 'レット';
+        text2 = 'レット2'; // 置き換えられる。再宣言✗　再代入◯
+        //
+        title.addEventListener('click', function () {
+            alert('スパン');
+        });
+        //サブタイトルをクリックしたら、アラートでサブタイトルとでるようにしてください。
+
+        //JavaScriptの世界に取りこまないと使えない。
+        //とりあえず、変数に入れとけ!
+        const sub = document.querySelector('h2');
+        console.log(sub);//何してる？ コンソールに表示してる＝確認してる
+        //se clicar no sub-titulo aparece o alerta
+        sub.addEventListener('click', function () {
+            alert('サブタイトル');
+        });
+
+        //複数要素の取得(document.querySelectorAll(cssセレクター);
+        const lists = document.querySelectorAll('li');
+        console.log(lists);
+        //Nodelist = 配列っぽいもの　=　インデックス・添字（０から始まる数値）
+
+        //配列の添字(インデックス)・添字での取得
+        //後ろに[]でインデックスの数値を入れる
+        console.log(lists[2]);// 3
+        console.log(lists[4]);// 5
+
+        //if文(条件分)
+        let number = 1;
+        if (number === 1) {
+            console.log('1です。')
+        } else if (number === 2) {
+            console.log('2です。')
+        } else {
+            console.log('それ以外です。')
+        }
+
+        //配列の要素数を使った、for文
+        const animals = ['いぬ', 'ねこ', 'リス', 'サメ'];
+        console.log(animals[1]);
+
+        for (let i = 0; i < animals.length; i = i + 1) {
+            console.log(animals[i])
+        }
+
+        //listsをループさせる
+        //配列の要素数.length
+        for (let i = 0; 1 < lists.length; i++) {
+            console.log(lists[i]);
+        }
+
+        //クラス要素の追加
+
+        lists[1].classList.add('green');
+        lists[4].classList.remove('orange');
+
+        //関数の定義と、関数の呼び出し（実行）
+        //関数の定義
+        // changeColor();
+
+        //<button>の色を変える</button>をクリックしたら、色が変わるようにしたい
+
+        const Btn = document.querySelector('button');
+        Btn.addEventListener('click', function () {
+            changeColor();
+        });
+
+    </script>
+</body>
+
+
+</html>

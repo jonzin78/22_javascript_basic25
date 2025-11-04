@@ -1,0 +1,34 @@
+question5.html
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>おにぎり職人ゲーム</title>
+</head>
+
+<body>
+    <h1>🍙 おにぎり職人チャレンジ！</h1>
+    <p>
+        ボタンをクリックしてしゃけおにぎりを握ろう。<br />具材はランダムで決まるよ！
+    </p>
+    <div id="makeOrigi"><button id="makeBtn">おにぎりを握る</button></div>
+    <p id="log">具材がここに表示されます。</p>
+    <p id="shakeCount"><span>0</span> 回</p>
+    <script>
+        //Q5で利用する
+        const shakeCount = document.querySelector('.shakeCount span');
+        let shakeCountNum = 0;
+
+        function respondBtn() {
+            const makeOrigi = document.querySelector('.makeBtn');
+            makeOrigi.classList.add('おにぎりを握った！');
+            console.log("おにぎりを握った！");
+        }
+
+        const ingredients = ['しゃけ', 'うめ', 'こんぶ', 'ツナマヨ'];
+        //ここに記述していきます。
+    </script>
+</body>
+
+</html>
