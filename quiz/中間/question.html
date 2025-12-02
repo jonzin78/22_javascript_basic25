@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- styleはheadの中に -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .globalmenu {
+            background-color: #000;
+            width: 50%;
+            height: 100vh;
+            position: relative;
+            transition: transform 200ms ease-in-out;
+            /*transform: translateX(-90%);*/
+            /*↑上のコメントアウトを外す */
+        }
+
+        .open {
+            transform: translateX(0);
+        }
+
+        .menu {
+            margin: 0;
+            list-style-type: none;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+    </style>
+
+    <!-- body中に -->
+    <nav class="globalmenu">
+        <ul class="menu">
+            <li>メニュー項目01</li>
+            <li>メニュー項目02</li>
+            <li>メニュー項目03</li>
+            <li>メニュー項目04</li>
+        </ul>
+        <button>OPEN</button>
+    </nav>
+    <div class="images">
+        <img src="path/cat.png" alt="猫の画像" class="img_cat">
+        <img src="path/dog.png" alt="犬の画像" class="img_dog">
+        <img src="path/panda.png" alt="パンダの画像" class="img_panda">
+    </div>
+    <p><span>トライデントコンピュータ専門学校</span>は愛知県名古屋市にあり、1984年に開校。IT技術者多数育成。現在、情報処理系3学科とCG／ゲーム開発／<span>Webデザイン</span>／CADなどの学科もあり、卒業生の<span>就職実績</span>も豊富です。
+    </p>
+    <script>
+        let school = 'トライデントコンピュータ専門学校';
+        let course = 'Webデザイン学科';
+        console.log(school, course);
+
+        const catImg = document.querySelector('.img_cat');
+        console.log('猫の画像');
+        
+        const goranger = ['アカレンジャー', 'アオレンジャー', 'ミドレンジャー', 'キレンジャー', 'モモレンジャー'];
+        console.log(goranger[4]);
+
+        for (let i = 0; i < goranger.length; i = i + 1) {
+            console.log(goranger[i])
+        }
+
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', function () {
+            const gnav = document.querySelector('.globalmenu');
+
+            open.classList.open('button');
+        });
+
+        const x = 8;
+        const y = 15;
+        let result;
+
+        if (x > 5 && y < 10) {
+            result = "A";
+        } else if (x < 10 || y >= 15) {
+            result = "B";
+        } else {
+            result = "C";
+        }
+
+
+
+    </script>
+</body>
+
+</html>

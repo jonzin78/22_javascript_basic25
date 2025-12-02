@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //q1
+        const item = {
+            name: 'Pen',
+            price: 120,
+        };
+
+        const productName = item.name;
+        // consot productName = item['name']; でも可
+
+        //q2
+        const fruit = {
+            type: 'Apple',
+            color: 'red',
+        };
+
+        //上書き
+        fruit.color = 'green';
+        console.log(fruit);
+
+        //q3
+        const animals = [
+            { name: 'ポチ', age: 5 },
+            { name: 'たま」', age: 2 },
+        ];
+        //配列なのでインデックス指定
+        const name = animals[1].name; // 'たま」'
+
+        //q4
+        function greet(name) {
+            console.log('こんにちは ' + name + ' さん');
+        }
+
+        //関数の実行は「関数名(引数);」
+        greet('Yuta'); // こんにちはYutaさん
+
+        //q5
+        function isBig(num) {
+            if (num >= 100) {
+                console.log(true);
+            } else {
+                console.log(false);
+            }
+        }
+        isBig(150); // true
+    </script>
+</body>
+
+</html>
