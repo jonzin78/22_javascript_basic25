@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Q1 */
+        const site = {/* 変数はconstを指す */
+            title: 'Portfolio',
+            author: 'Yamada',
+            themeColor: '#ff9900'
+        };
+
+        /* Q2 */
+        const getTotalPrice = function (price) {
+            const tax = 0.1; // 消費税率 10%
+            return price + price * tax;
+        };
+
+        // 1000円の商品を購入したときの税込価格を表示
+        console.log(getTotalPrice(1000));
+
+        /* Q3 */
+        const isInStock = (stock) => {
+            if (stock > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+    </script>
+</body>
+
+</html>
